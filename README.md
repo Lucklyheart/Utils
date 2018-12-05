@@ -24,8 +24,6 @@
 - XmlUtil （XML文件工具类，包含：将xml文件解析成实体集合、获取xml标签值、将标签值解析成实体集合）
 ### How to use
 #### Step 1. Add the JitPack repository to your build file 
-- For gradle 
-Add it in your root build.gradle at the end of repositories: 
 	allprojects {
 		repositories {
 			...
