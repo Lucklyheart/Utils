@@ -2,7 +2,7 @@ package com.ip.ipsearch.Util;
 
 import android.util.Log;
 
-import com.ip.ipsearch.BuildConfig;
+import com.ip.ipsearch.mylibrary.BuildConfig;
 
 /**
  * Log日志工具类

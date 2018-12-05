@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 
-import com.ip.ipsearch.R;
+import com.ip.ipsearch.mylibrary.R;
 
 /**
  * 创建删除快捷图标
