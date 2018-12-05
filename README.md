@@ -25,28 +25,14 @@
 ### How to use
 #### Step 1. Add the JitPack repository to your build file 
 - For gradle 
-Add it in your root build.gradle at the end of repositories:
+Add it in your root build.gradle at the end of repositories: 
 	allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	} 
- - For maven 
- <repositories>
-   <repository>
-	<id>jitpack.io</id>
-	<url>https://jitpack.io</url>
-  </repository>
-</repositories> 
 #### Step 2. Add the dependency 
-- For gradle 
 	dependencies {
 	        implementation 'com.github.Lucklyheart:Utils:v1.0.0'
 	} 
-- For maven 
-<dependency>
-  <groupId>com.github.Lucklyheart</groupId>
-    <artifactId>Utils</artifactId>
-  <version>v1.0.0</version>
-</dependency>
