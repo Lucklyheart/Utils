@@ -23,7 +23,7 @@
 - ToastUtil （Tosat提醒）
 - XmlUtil （XML文件工具类，包含：将xml文件解析成实体集合、获取xml标签值、将标签值解析成实体集合）
 ### How to use
-#### Step 1. Add the JitPack repository to your build file
+#### Step 1. Add the JitPack repository to your build file 
 - For gradle 
 Add it in your root build.gradle at the end of repositories:
 	allprojects {
@@ -31,19 +31,19 @@ Add it in your root build.gradle at the end of repositories:
 			...
 			maven { url 'https://jitpack.io' }
 		}
-	}
+	} 
  - For maven 
  <repositories>
 		<repository>
 		    <id>jitpack.io</id>
 		    <url>https://jitpack.io</url>
 		</repository>
-	</repositories>
-#### Step 2. Add the dependency
+	</repositories> 
+#### Step 2. Add the dependency 
 - For gradle 
 	dependencies {
 	        implementation 'com.github.Lucklyheart:Utils:v1.0.0'
-	}
+	} 
 - For maven 
 <dependency>
 	    <groupId>com.github.Lucklyheart</groupId>
