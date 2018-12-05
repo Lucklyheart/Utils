@@ -34,11 +34,11 @@ Add it in your root build.gradle at the end of repositories:
 	} 
  - For maven 
  <repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories> 
+   <repository>
+	<id>jitpack.io</id>
+	<url>https://jitpack.io</url>
+  </repository>
+</repositories> 
 #### Step 2. Add the dependency 
 - For gradle 
 	dependencies {
@@ -46,7 +46,7 @@ Add it in your root build.gradle at the end of repositories:
 	} 
 - For maven 
 <dependency>
-	    <groupId>com.github.Lucklyheart</groupId>
-	    <artifactId>Utils</artifactId>
-	    <version>v1.0.0</version>
-	</dependency>
+  <groupId>com.github.Lucklyheart</groupId>
+    <artifactId>Utils</artifactId>
+  <version>v1.0.0</version>
+</dependency>
