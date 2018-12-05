@@ -6,18 +6,24 @@ import android.content.Context;
 import java.util.Stack;
 
 /**
- * Activity栈管理器
+ * Activity栈管理器()
  */
 public class ActivityUtil {
 
-    public static Stack<Activity> activityStack;
+    private static Stack<Activity> activityStack = new Stack<>();
 
-    public static ActivityUtil instance;
+    private static ActivityUtil instance;
+
+    private ActivityUtil() {
+    }
 
     public static ActivityUtil getInstance() {
-
         if (instance == null) {
-            instance = new ActivityUtil();
+            synchronized (ActivityUtil.class) {
+                if (instance == null) {
+                    instance = new ActivityUtil();
+                }
+            }
         }
         return instance;
     }
@@ -27,7 +33,11 @@ public class ActivityUtil {
      */
     public void addActivity(Activity activity) {
         if (activityStack == null) {
-            activityStack = new Stack<Activity>();
+            synchronized (ActivityUtil.class) {
+                if (activityStack == null) {
+                    activityStack = new Stack<Activity>();
+                }
+            }
         }
         activityStack.add(activity);
     }
@@ -36,16 +46,17 @@ public class ActivityUtil {
      * 获取当前Activity（堆栈中最后压入的）
      */
     public Activity currentActivity() {
-        Activity activity = activityStack.lastElement();
-        return activity;
+        return activityStack == null ? null : activityStack.lastElement();
     }
 
     /**
      * 结束当前Activity（堆栈中最后压入的）
      */
     public void finishLastActivity() {
-        Activity activity = activityStack.lastElement();
-        finishActivity(activity);
+        if (activityStack != null && !activityStack.empty()) {
+            Activity activity = activityStack.lastElement();
+            finishActivity(activity);
+        }
     }
 
     /**
@@ -53,9 +64,10 @@ public class ActivityUtil {
      */
     public void finishActivity(Activity activity) {
         if (activity != null) {
-            activityStack.remove(activity);
-            activity.finish();
-            activity = null;
+            if (activityStack != null && !activityStack.empty()) {
+                activityStack.remove(activity);
+                activity.finish();
+            }
         }
     }
 
@@ -63,7 +75,7 @@ public class ActivityUtil {
      * 结束所有的Activity
      */
     public void finishAllActivity() {
-        if (activityStack != null) {
+        if (activityStack != null && !activityStack.empty()) {
 
             for (int i = 0; i < activityStack.size(); i++) {
                 Activity activity = activityStack.get(i);
@@ -84,15 +96,7 @@ public class ActivityUtil {
      * 退出应用程序
      */
     public void AppExit(Context context) {
-        try {
-            finishAllActivity();
-            android.app.ActivityManager activityMgr = (android.app.ActivityManager) context
-                    .getSystemService(Context.ACTIVITY_SERVICE);
-            activityMgr.restartPackage(context.getPackageName());
-            finishAllActivity();
-            System.exit(0);
-        } catch (Exception e) {
-            LogUtil.e("退出失败：" + e);
-        }
+        finishAllActivity();
+        System.exit(0);
     }
 }

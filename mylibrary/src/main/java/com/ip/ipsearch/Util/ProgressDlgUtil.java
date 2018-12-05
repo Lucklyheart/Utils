@@ -20,8 +20,8 @@ public class ProgressDlgUtil {
             progressDlg = new ProgressDialog(ctx);
             progressDlg.setProgressStyle(ProgressDialog.STYLE_SPINNER);// 设置进度条的形式为圆形转动的进度条
             progressDlg.setCancelable(false);
-            progressDlg.show();
         }
+        progressDlg.show();
     }
 
     /**

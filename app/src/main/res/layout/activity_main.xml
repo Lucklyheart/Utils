@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rly_bezier_curve_shopping_cart"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
