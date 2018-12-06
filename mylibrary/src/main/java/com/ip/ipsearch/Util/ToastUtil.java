@@ -8,7 +8,10 @@ import android.widget.Toast;
  */
 public class ToastUtil {
 
-    public static Toast toast = null;
+    public static Toast toast;
+
+    private ToastUtil() {
+    }
 
     public static void show(Context ctx, String msg) {
         if (toast == null) {

@@ -94,8 +94,7 @@ public class BitmapUtil {
         if (drawable == null) {
             throw new IllegalArgumentException("Drawable为空，请检查你的参数");
         }
-        Bitmap bitmap =
-                Bitmap.createBitmap(drawable.getIntrinsicWidth(),
+        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(),
                         drawable.getIntrinsicHeight(),
                         drawable.getOpacity() != PixelFormat.OPAQUE? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(bitmap);

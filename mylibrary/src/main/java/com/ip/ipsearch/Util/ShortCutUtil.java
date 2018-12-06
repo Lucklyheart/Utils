@@ -12,7 +12,7 @@ import com.ip.ipsearch.mylibrary.R;
 /**
  * 创建删除快捷图标
  * 需要权限: com.android.launcher.permission.INSTALL_SHORTCUT
- *        com.android.launcher.permission.UNINSTALL_SHORTCUT
+ * com.android.launcher.permission.UNINSTALL_SHORTCUT
  */
 public class ShortCutUtil {
     private ShortCutUtil() {
@@ -21,6 +21,7 @@ public class ShortCutUtil {
 
     /**
      * 检测是否存在快捷键
+     *
      * @param activity Activity
      * @return 是否存在桌面图标
      */
@@ -43,10 +44,11 @@ public class ShortCutUtil {
 
     /**
      * 为程序创建桌面快捷方式
+     *
      * @param activity Activity
-     * @param res     res
+     * @param res      res
      */
-    public static void addShortcut(Activity activity,int res) {
+    public static void addShortcut(Activity activity, int res) {
         Intent shortcut = new Intent(
                 "com.android.launcher.action.INSTALL_SHORTCUT");
         //快捷方式的名称
@@ -66,6 +68,7 @@ public class ShortCutUtil {
 
     /**
      * 删除程序的快捷方式
+     *
      * @param activity Activity
      */
     public static void delShortcut(Activity activity) {

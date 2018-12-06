@@ -10,13 +10,17 @@ import java.util.Stack;
  */
 public class ActivityUtil {
 
-    private static Stack<Activity> activityStack = new Stack<>();
+    private static Stack<Activity> activityStack;
 
     private static ActivityUtil instance;
 
-    private ActivityUtil() {
-    }
+    private ActivityUtil() {}
 
+    /**
+     * 实例化对象
+     *
+     * @return
+     */
     public static ActivityUtil getInstance() {
         if (instance == null) {
             synchronized (ActivityUtil.class) {
