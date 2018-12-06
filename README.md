@@ -35,4 +35,4 @@
 	        implementation 'com.github.Lucklyheart:Utils:v1.0.2'
 	} 
 ### Final
-	- <font color="ff66">欢迎路过的码神们指导建议！！！</font>
+	欢迎路过的码神们指导和建议！！！
