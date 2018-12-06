@@ -22,7 +22,6 @@
 - StringUtil （字符串工具类，提供一些字符串相关的便捷方法）
 - ToastUtil （Tosat提醒）
 - XmlUtil （XML文件工具类，包含：将xml文件解析成实体集合、获取xml标签值、将标签值解析成实体集合）
-- <font color="ff66">欢迎路过的码神们指导建议！！！</font>
 ### How to use
 #### Step 1. Add the JitPack repository to your build file 
 	allprojects {
@@ -35,3 +34,5 @@
 	dependencies {
 	        implementation 'com.github.Lucklyheart:Utils:v1.0.2'
 	} 
+### Final
+	- <font color="ff66">欢迎路过的码神们指导建议！！！</font>
