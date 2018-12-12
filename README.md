@@ -35,4 +35,4 @@
 	        implementation 'com.github.Lucklyheart:Utils:v1.0.2'
 	} 
 ### Final
-	欢迎路过的码神们指导和建议！！！
+	欢迎指导和建议！！！
