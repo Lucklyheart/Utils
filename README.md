@@ -2,6 +2,7 @@
 一些经常使用的工具类，避免重复手写，一行代码搞定，值得拥有！
 ### What functions can be used
 - ActivityUtil （栈管理器） 
+
 '''
 	//将Activity加入栈管理器
         ActivityUtil.getInstance().addActivity(this);
@@ -16,6 +17,7 @@
         //退出APP
         ActivityUtil.getInstance().AppExit(this);
 '''
+
 - AppUtil （APP的工具类，包含版本号、版本名称、安装的应用程序ICON）
 - BitmapUtil （工具类，获取Bitmap对象）
 - ColorUtil  (定义了一些出场率较高的色值)
