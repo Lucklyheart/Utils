@@ -3,7 +3,7 @@
 ### What functions can be used
 - ActivityUtil （栈管理器）
 
-		//将Activity加入栈管理器
+			//将Activity加入栈管理器
          	ActivityUtil.getInstance().addActivity(this);
        	 	//将Activity从栈管理器删除
         	ActivityUtil.getInstance().finishActivity(this);
