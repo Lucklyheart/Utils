@@ -5,7 +5,7 @@
 
 			//将Activity加入栈管理器
          	ActivityUtil.getInstance().addActivity(this);
-       	 	//将Activity从栈管理器删除
+       	 //将Activity从栈管理器删除
         	ActivityUtil.getInstance().finishActivity(this);
         	//清空除栈管理器
         	ActivityUtil.getInstance().finishAllActivity();
