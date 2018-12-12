@@ -1,5 +1,5 @@
 ### Utils
-一些出场率较高的工具类，值得拥有！
+一些经常使用的工具类，避免重复手写，一行代码搞定，值得拥有！
 ### What functions can be used
 - ActivityUtil （栈管理器）
 - AppUtil （APP的工具类，包含版本号、版本名称、安装的应用程序ICON）
