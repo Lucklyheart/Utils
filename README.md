@@ -3,19 +3,32 @@
 ### What functions can be used
 - ActivityUtil （栈管理器）
 
-			//将Activity加入栈管理器
-         	ActivityUtil.getInstance().addActivity(this);
+		//将Activity加入栈管理器
+         ActivityUtil.getInstance().addActivity(this);
        	//将Activity从栈管理器删除
-        	ActivityUtil.getInstance().finishActivity(this);
-        	//清空除栈管理器
-        	ActivityUtil.getInstance().finishAllActivity();
-        	//获取最后一个入栈的Activity
-        	ActivityUtil.getInstance().finishLastActivity();
-        	//获取最近的一个Activity
-        	ActivityUtil.getInstance().currentActivity();
-        	//退出APP
-        	ActivityUtil.getInstance().AppExit(this);
+        ActivityUtil.getInstance().finishActivity(this);
+        //清空除栈管理器
+        ActivityUtil.getInstance().finishAllActivity();
+        //获取最后一个入栈的Activity
+        ActivityUtil.getInstance().finishLastActivity();
+        //获取最近的一个Activity
+        ActivityUtil.getInstance().currentActivity();
+        //退出APP
+        ActivityUtil.getInstance().AppExit(this);
 - AppUtil （APP的工具类，包含版本号、版本名称、安装的应用程序ICON）
+	
+		//获取APP的icon
+        Drawable drawable = AppUtil.getApplicationIcon(this);
+      	//获取设备上安装的所有应用的包信息
+        List<PackageInfo> list = AppUtil.getInstalledPackages(this);
+        //获取APP的包名
+        String packageName = AppUtil.getPackageName(this);
+        //获取APP的versionCode值
+        int versionCode = AppUtil.getVersionCode(this);
+        //获取APP的versionName值
+        String versionName = AppUtil.getVersionName(this);
+        //安装指定路径下的APP
+        AppUtil.installApk(this, "将要安装的APP的路径");
 - BitmapUtil （工具类，获取Bitmap对象）
 - ColorUtil  (定义了一些出场率较高的色值)
 - CountDownTimerUtil （倒计时工具类）
