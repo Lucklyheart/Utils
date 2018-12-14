@@ -5,7 +5,7 @@
 
 		//将Activity加入栈管理器
          ActivityUtil.getInstance().addActivity(this);
-      //将Activity从栈管理器删除
+       //将Activity从栈管理器删除
         ActivityUtil.getInstance().finishActivity(this);
         //清空除栈管理器
         ActivityUtil.getInstance().finishAllActivity();
@@ -19,7 +19,7 @@
 	
 		//获取APP的icon
         Drawable drawable = AppUtil.getApplicationIcon(this);
-      //获取设备上安装的所有应用的包信息
+       //获取设备上安装的所有应用的包信息
         List<PackageInfo> list = AppUtil.getInstalledPackages(this);
         //获取APP的包名
         String packageName = AppUtil.getPackageName(this);
