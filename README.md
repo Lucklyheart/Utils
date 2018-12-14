@@ -44,7 +44,8 @@
         //获取指定图片，指定大小的缩略图
         Bitmap bitmap  BitmapUtil.getThumbnailsBitmap(Bitmap,height,width);
 - ColorUtil  (定义了一些出场率较高的色值) 
-	定义了69种常用色值供使用
+	
+		定义了69种常用色值供使用
 - CountDownTimerUtil （倒计时工具类）
 	
 		//millisInFuture：总时长
@@ -85,7 +86,7 @@
         FileUtil.mkFile(path, boolean);
 - HttpUtil （原生HTTP请求工具）
 	
-	 	//get同步请求
+		//get同步请求
         String result = HttpUtil.doGet(url);
         //get异步请求
         HttpUtil.doGetAsyn(url, new HttpUtil.CallBack() {
@@ -107,7 +108,7 @@
     }
 - LogUtil （日志工具，调整为只在Debug模式下才有输出信息）
 
-		 //只有在debug模式下日志信息才会输出
+		//只有在debug模式下日志信息才会输出
         LogUtil.d(msg);
         LogUtil.d(msg,throwable);
         LogUtil.e(msg);
@@ -118,7 +119,7 @@
         LogUtil.v(msg,throwable);
 - MeasureUtil （测量控件大小的工具）
 
-		 //获取View高度
+		//获取View高度
         MeasureUtil.getHeight(View);
         //获取View宽度
         MeasureUtil.getWidth(View);
@@ -150,7 +151,7 @@
         NetWorkUtil.isWifiDataEnable(Context);
 - PhoneUtil （手机组件工具类）
 	
-		 //获取手机品牌
+		//获取手机品牌
         PhoneUtil.getMobileBrand(Context);
         //获取手机型号
         PhoneUtil.getMobileModel(Context);
@@ -187,7 +188,7 @@
         ProgressDlgUtil.dismiss();
 - ReflectUtil （反射工具用于二次验证）
 	
-	 	//根据字段名称获取指定Field字段
+		//根据字段名称获取指定Field字段
         ReflectUtil.getField(Class<?> clazz, String filedName);
         //根据字段名称获取指定的Field
         ReflectUtil.getFieldByName(Field[] fields, String fieldName);
@@ -197,7 +198,7 @@
         ReflectUtil.setFieldValue(T t,Field field, String fieldName, String value);
 - ScreenUtil （屏幕工具类，涉及到屏幕宽度、高度、密度比、(像素、dp、sp)之间的转换等）
 	
-	        //dip转换为px大小
+		//dip转换为px大小
         ScreenUtil.dp2px(Context, dpValue);
         //px转换为dp值
         ScreenUtil.px2dp(Context, pxValue);
@@ -223,7 +224,7 @@
         ScreenUtil.snapShotWithoutStatusBar(Activity);
 - SDCardUtil （SD卡工具类，包含SD卡状态、路径、容量大小）
 	
-	 	///data/data/PackageName/cache的路径
+		//data/data/PackageName/cache的路径
         SDCardUtil.getDataCachePath(Context);
         //获取应用程序的/data/data目录
         SDCardUtil.getDataFilePath(Context);
@@ -255,9 +256,11 @@
         //删除程序的快捷方式
         ShortCutUtil.delShortcut(Activity);
 - StringUtil （字符串工具类，提供一些字符串相关的便捷方法）
-	包含了一些常用的字符串检测：格式转换、空判断、MD5加密、大小写判断、长度、截取、格式化等操作
+	
+		包含了一些常用的字符串检测：格式转换、空判断、MD5加密、大小写判断、长度、截取、格式化等操作
 - ToastUtil （Tosat提醒）
-	常用的toast提醒
+	
+		常用的toast提醒
 - XmlUtil （XML文件工具类，包含：将xml文件解析成实体集合、获取xml标签值、将标签值解析成实体集合）
 	
 	     //获取xml字符串标签中的属性值
