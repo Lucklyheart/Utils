@@ -263,7 +263,7 @@
 		常用的toast提醒
 - XmlUtil （XML文件工具类，包含：将xml文件解析成实体集合、获取xml标签值、将标签值解析成实体集合）
 	
-	     //获取xml字符串标签中的属性值
+		//获取xml字符串标签中的属性值
         XmlUtil.attributeToObject(String xml, Class<T> clazz, String tagName);
         // 获取Xml文件中的属性值
         XmlUtil.getTagAttribute(String xml, String tagName, String attributeName);
