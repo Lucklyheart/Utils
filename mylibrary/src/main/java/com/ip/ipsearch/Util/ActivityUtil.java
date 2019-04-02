@@ -6,7 +6,7 @@ import android.content.Context;
 import java.util.Stack;
 
 /**
- * Activity栈管理器()
+ * Activity栈管理器
  */
 public class ActivityUtil {
 

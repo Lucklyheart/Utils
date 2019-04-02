@@ -20,39 +20,57 @@ public class DateUtil {
         /**
          * 格式："yyyy-MM-dd HH:mm:ss"
          */
-        ALL_TIME{public String getValue(){return "yyyy-MM-dd HH:mm:ss";}},
+        ALL_TIME{
+            @Override
+            public String getValue(){return "yyyy-MM-dd HH:mm:ss";}},
         /**
          * 格式："yyyy-MM"
          */
-        ONLY_MONTH{public String getValue(){return "yyyy-MM";}},
+        ONLY_MONTH{
+            @Override
+            public String getValue(){return "yyyy-MM";}},
         /**
          * 格式："yyyy-MM-dd"
          */
-        ONLY_DAY{public String getValue(){return "yyyy-MM-dd";}},
+        ONLY_DAY{
+            @Override
+            public String getValue(){return "yyyy-MM-dd";}},
         /**
          * 格式："yyyy-MM-dd HH"
          */
-        ONLY_HOUR{public String getValue(){return "yyyy-MM-dd HH";}},
+        ONLY_HOUR{
+            @Override
+            public String getValue(){return "yyyy-MM-dd HH";}},
         /**
          * 格式："yyyy-MM-dd HH:mm"
          */
-        ONLY_MINUTE{public String getValue(){return "yyyy-MM-dd HH:mm";}},
+        ONLY_MINUTE{
+            @Override
+            public String getValue(){return "yyyy-MM-dd HH:mm";}},
         /**
          * 格式："MM-dd"
          */
-        ONLY_MONTH_DAY{public String getValue(){return "MM-dd";}},
+        ONLY_MONTH_DAY{
+            @Override
+            public String getValue(){return "MM-dd";}},
         /**
          * 格式："MM-dd HH:mm"
          */
-        ONLY_MONTH_SEC{public String getValue(){return "MM-dd HH:mm";}},
+        ONLY_MONTH_SEC{
+            @Override
+            public String getValue(){return "MM-dd HH:mm";}},
         /**
          * 格式："HH:mm:ss"
          */
-        ONLY_TIME{public String getValue(){return "HH:mm:ss";}},
+        ONLY_TIME{
+            @Override
+            public String getValue(){return "HH:mm:ss";}},
         /**
          * 格式："HH:mm"
          */
-        ONLY_HOUR_MINUTE{public String getValue(){return "HH:mm";}};
+        ONLY_HOUR_MINUTE{
+            @Override
+            public String getValue(){return "HH:mm";}};
         public abstract String getValue();
     }
 
