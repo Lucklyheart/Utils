@@ -28,7 +28,7 @@
         //获取APP的versionName值
         String versionName = AppUtil.getVersionName(this);
         //安装指定路径下的APP
-        AppUtil.installApk(this, "将要安装的APP的路径");
+        AppUtil.installApk(this, "将要安装的APP的路径","Android7.0及以上必须填写FileProvider在AndroidManifest的配置参数");
 - BitmapUtil （工具类，获取Bitmap对象）
  		
 		//将bitmap转成二进制
