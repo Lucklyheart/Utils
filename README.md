@@ -1,6 +1,23 @@
 ### Utils
-一些经常使用的工具类，避免重复手写，一行代码搞定，大小只有177K，值得拥有！
+一些经常使用的工具类，避免重复手写，一行代码搞定，大小只有180K，值得拥有！
 ### What functions can be used
+- AcacheUtil（缓存管理：一些基本数据的存储操作）
+		
+		//获取管理对象
+		AcacheUtil.get(this);
+		AcacheUtil.get(this，name);
+		//存储操作：键为字符串,值不限制（其实最后还是转成字符串）,time为非必填项（缓存保存时间到期自动删除）
+		AcacheUtil.get(this).put("key",vealue);
+		AcacheUtil.get(this).put("key",vealue,time);
+		//取值操作
+		AcacheUtil.get(this).getAsString("key");
+		AcacheUtil.get(this).getAsBinary("key");
+		//获取缓存文件
+		AcacheUtil.get(this).file("name");
+		//移除某个键
+		AcacheUtil.get(this).remove("key");
+		//清空所有缓存
+		AcacheUtil.get(this).clear();
 - ActivityUtil （栈管理器）
 
 		//将Activity加入栈管理器
