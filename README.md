@@ -296,7 +296,7 @@
 	} 
 #### Step 2. Add the dependency 
 	dependencies {
-	        implementation 'com.github.Lucklyheart:Utils:v1.0.3'
+	        implementation 'com.github.Lucklyheart:Utils:v1.0.4'
 	} 
 ### Final
 	欢迎指导和建议！！！
