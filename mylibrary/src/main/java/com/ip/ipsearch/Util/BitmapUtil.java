@@ -1,6 +1,7 @@
 package com.ip.ipsearch.Util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -8,9 +9,18 @@ import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.ThumbnailUtils;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.view.View;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * Bitmap工具类，获取Bitmap对象
@@ -134,5 +144,54 @@ public class BitmapUtil {
         }else{
             return heigthScale;
         }
+    }
+
+    /**
+     * 截取指定View为图片
+     *
+     * @param view
+     * @return
+     */
+    public static Bitmap captureView(View view) throws Throwable {
+        Bitmap bm = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        view.draw(new Canvas(bm));
+        return bm;
+    }
+
+    /*
+     * 保存图片到本地
+     */
+    public static void saveBitmap(Context context, Bitmap bitmap, String bitName) {
+        String fileName;
+        File file;
+        if (Build.BRAND.equals("Xiaomi")) { // 小米手机
+            fileName = Environment.getExternalStorageDirectory().getPath() + "/DCIM/Camera/" + bitName;
+        } else {
+            fileName = Environment.getExternalStorageDirectory().getPath() + "/DCIM/" + bitName;
+        }
+        file = new File(fileName);
+
+        if (file.exists()) {
+            file.delete();
+        }
+        FileOutputStream out;
+        try {
+            out = new FileOutputStream(file);
+            // 格式为 JPEG，照相机拍出的图片为JPEG格式的，PNG格式的不能显示在相册中
+            if (bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out)) {
+                out.flush();
+                out.close();
+                // 插入图库
+                MediaStore.Images.Media.insertImage(context.getContentResolver(), file.getAbsolutePath(), bitName, null);
+
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+        // 发送广播，通知刷新图库的显示
+        context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + fileName)));
     }
 }
