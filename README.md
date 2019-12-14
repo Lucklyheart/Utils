@@ -55,11 +55,15 @@
         //将Drawable转成Bitmap
         Bitmap bitmap = BitmapUtil.drawableToBitmap(Drawable);
         //获取指定路径下的指定大小的图片
-        Bitmap bitmap  BitmapUtil.getBitmapFromFile(path, height, width);
+        Bitmap bitmap = BitmapUtil.getBitmapFromFile(path, height, width);
         //获取资源文件中指定ID，指定大小的图片
-        Bitmap bitmap  BitmapUtil.getBitmapFromResource(this,id,height,width);
+        Bitmap bitmap = BitmapUtil.getBitmapFromResource(this,id,height,width);
         //获取指定图片，指定大小的缩略图
-        Bitmap bitmap  BitmapUtil.getThumbnailsBitmap(Bitmap,height,width);
+        Bitmap bitmap = BitmapUtil.getThumbnailsBitmap(Bitmap,height,width);
+        //获取指定View上的图片
+        Bitmap bitmap = BitmapUtil.captureView(View);
+        //保存图片到本地
+        Bitmap bitmap = BitmapUtil.saveBitmap(Context,Bitmap,FileName);
 - ColorUtil  (定义了一些出场率较高的色值) 
 	
 		定义了69种常用色值供使用
@@ -166,6 +170,32 @@
         NetWorkUtil.isWiFiConnected(Context);
         //判断wifi网络是否可用
         NetWorkUtil.isWifiDataEnable(Context);
+- NumberUtil （网络工具类，包含网络的判断、跳转到设置页面）
+		
+		//加 scale:保留的小数位
+        NumberUtil.add(String v1, String v2, int scale);
+        //减 
+        NumberUtil.sub(String v1, String v2, int scale);
+        //乘
+        NumberUtil.mul(String v1, String v2, int scale);
+        //乘（向下取整）
+        NumberUtil.mulDown(String v1, String v2, int scale);
+        //除
+        NumberUtil.div(String v1, String v2, int scale);
+        //除（向下取整）
+        NumberUtil.divDown(String v1, String v2, int scale);
+        //四舍五入
+        NumberUtil.round(String v1, int scale);	
+        //取余
+        NumberUtil.remainder(String v1, String v2, int scale);	
+        //比较大小
+        NumberUtil.compare(String v1, String v2);	
+        //格式化数字
+        NumberUtil.numberFormat(double number, String pattern);	
+        //是否钱
+        NumberUtil.isMoney(String str);	
+        //是否数字
+        NumberUtil.isNumber(String str);	
 - PhoneUtil （手机组件工具类）
 	
 		//获取手机品牌
