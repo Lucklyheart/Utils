@@ -64,6 +64,12 @@
         Bitmap bitmap = BitmapUtil.captureView(View);
         //保存图片到本地
         Bitmap bitmap = BitmapUtil.saveBitmap(Context,Bitmap,FileName);
+- BlurUtil （高斯模糊工具类）
+	
+		//Bitmap 图片资源
+        //radius 模糊半径 0-25
+        //scale 模糊系数 >=1
+        BlurUtil.getInstance(getContext()).bitmap(resource).radius(15).scale(8).blur())
 - CountDownTimerUtil （倒计时工具类）
 	
 		//millisInFuture：总时长
@@ -277,6 +283,11 @@
 - StringUtil （字符串工具类，提供一些字符串相关的便捷方法）
 	
 		包含了一些常用的字符串检测：格式转换、空判断、MD5加密、大小写判断、长度、截取、格式化等操作
+- UpdateUtil （app更新工具类）
+	
+		//url 下载地址
+        //AppName 保存的app地址名称
+        new UpdateUtil(getContext).downLoad(String url,String AppName)
 - XmlUtil （XML文件工具类，包含：将xml文件解析成实体集合、获取xml标签值、将标签值解析成实体集合）
 	
 		//获取xml字符串标签中的属性值
