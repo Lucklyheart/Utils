@@ -11,8 +11,8 @@ import android.widget.ListView;
  * 常用的测量功能
  */
 public class MeasureUtil {
-    private MeasureUtil() {
-    }
+
+    private MeasureUtil() {}
 
     /**
      * 获取控件的测量高度

@@ -12,11 +12,8 @@ import java.io.File;
  * 手机组件调用工具类
  */
 public class PhoneUtil {
-    private static long lastClickTime;
 
-    private PhoneUtil() {
-        throw new Error("Do not need instantiate!");
-    }
+    private PhoneUtil() {}
 
     /**
      * 调用系统发短信界面
@@ -35,19 +32,6 @@ public class PhoneUtil {
         activity.startActivity(intent);
     }
 
-    /**
-     * 判断是否为连击
-     * @return  boolean
-     */
-    public static boolean isFastDoubleClick() {
-        long time = System.currentTimeMillis();
-        long timeD = time - lastClickTime;
-        if (0 < timeD && timeD < 500) {
-            return true;
-        }
-        lastClickTime = time;
-        return false;
-    }
 
     /**
      * 获取手机型号
@@ -76,43 +60,5 @@ public class PhoneUtil {
         } catch (Exception e) {
             return "未知";
         }
-    }
-
-    /**
-     *拍照打开照相机！
-     * @param requestcode   返回值
-     * @param activity   上下文
-     * @param fileName    生成的图片文件的路径
-     */
-    public static void toTakePhoto(int requestcode, Activity activity,String fileName) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra("camerasensortype", 2);// 调用前置摄像头
-        intent.putExtra("autofocus", true);// 自动对焦
-        intent.putExtra("fullScreen", false);// 全屏
-        intent.putExtra("showActionIcons", false);
-        try {
-            //创建一个当前任务id的文件，然后里面存放任务的照片和路径！这主文件的名字是用uuid到时候再用任务id去查路径！
-            File file = new File(fileName);
-            //如果这个文件不存在就创建一个文件夹！
-            if (!file.exists()) {
-                file.mkdirs();
-            }
-            Uri uri = Uri.fromFile(file);
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-            activity.startActivityForResult(intent, requestcode);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     *打开相册
-     * @param requestcode  响应码
-     * @param activity  上下文
-     */
-    public static void toTakePicture(int requestcode, Activity activity){
-        Intent intent = new Intent(Intent.ACTION_PICK, null);
-        intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-        activity.startActivityForResult(intent, requestcode);
     }
 }

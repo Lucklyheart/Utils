@@ -9,8 +9,7 @@ import java.util.regex.Pattern;
 
 public class HtmlUtil {
 
-    private HtmlUtil() {
-    }
+    private HtmlUtil() {}
 
     /**
      * 判断url是否含有参数

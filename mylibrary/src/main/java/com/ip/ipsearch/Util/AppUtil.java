@@ -19,8 +19,7 @@ import java.util.List;
  * 常用APP的工具类，包含版本号、版本名称、安装的应用程序ICON
  */
 public class AppUtil {
-    private AppUtil() {
-    }
+    private AppUtil() {}
 
     /**
      * 获取包名

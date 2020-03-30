@@ -10,8 +10,7 @@ import java.util.regex.Pattern;
  */
 public class NumberUtil {
 
-    private NumberUtil() {
-    }
+    private NumberUtil() {}
 
 
     /**
@@ -214,5 +213,16 @@ public class NumberUtil {
         return true;
     }
 
+    /**
+     * 保留小数点后多少位
+     *
+     * @param num   数据源
+     * @param match 位数
+     * @return
+     */
+    private static double retain(double num, int match) {
+        String result = String.format("%." + match + "f", num);
+        return Double.valueOf(result);
+    }
 
 }

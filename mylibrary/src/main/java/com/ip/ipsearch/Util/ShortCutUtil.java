@@ -15,9 +15,8 @@ import com.ip.ipsearch.mylibrary.R;
  * com.android.launcher.permission.UNINSTALL_SHORTCUT
  */
 public class ShortCutUtil {
-    private ShortCutUtil() {
-        throw new Error("Do not need instantiate!");
-    }
+
+    private ShortCutUtil() {}
 
     /**
      * 检测是否存在快捷键

@@ -13,9 +13,7 @@ import java.util.regex.Pattern;
  */
 public class StringUtil {
 
-    private StringUtil() {
-        throw new AssertionError();
-    }
+    private StringUtil() {}
 
     /**
      * <pre>

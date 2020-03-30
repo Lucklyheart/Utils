@@ -9,8 +9,7 @@ import com.ip.ipsearch.mylibrary.BuildConfig;
  */
 public class LogUtil {
 
-    private LogUtil() {
-    }
+    private LogUtil() {}
 
     /**
      * 打印information日志

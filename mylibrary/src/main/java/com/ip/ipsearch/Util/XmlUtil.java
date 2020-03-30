@@ -19,8 +19,7 @@ import java.util.List;
  */
 public class XmlUtil {
 
-    private XmlUtil() {
-    }
+    private XmlUtil() {}
 
     /*-
      * XML文件解析成实体,不涉及到标签的属性值。
