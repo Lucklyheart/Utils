@@ -147,7 +147,7 @@ public class StringUtil {
     }
 
     /**
-     * @param s 字符串
+     * @param s 字符串 全角转半角
      * @return String
      */
     public static String fullWidthToHalfWidth(String s) {
@@ -170,7 +170,7 @@ public class StringUtil {
     }
 
     /**
-     * @param s 字符串
+     * @param s 字符串 半角转全角
      * @return 返回的数值
      */
     public static String halfWidthToFullWidth(String s) {
