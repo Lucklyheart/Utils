@@ -220,7 +220,7 @@ public class NumberUtil {
      * @param match 位数
      * @return
      */
-    private static double retain(double num, int match) {
+    public static double retain(double num, int match) {
         String result = String.format("%." + match + "f", num);
         return Double.valueOf(result);
     }
