@@ -112,15 +112,15 @@
 
 		//84 to 火星坐标系 (GCJ-02) World Geodetic System ==> Mars Geodetic System
         GpsUtil.gps84_To_Gcj02(double lat, double lon);
-	   //火星坐标系 (GCJ-02) to 84 * * @param lon * @param lat
+	    //火星坐标系 (GCJ-02) to 84 * * @param lon * @param lat
         GpsUtil.gcj02_To_Gps84(double lat, double lon);
-	   //火星坐标系 (GCJ-02) 与百度坐标系 (BD-09) 的转换算法 将 GCJ-02 坐标转换成 BD-09 坐标
+	    //火星坐标系 (GCJ-02) 与百度坐标系 (BD-09) 的转换算法 将 GCJ-02 坐标转换成 BD-09 坐标
         GpsUtil.gcj02_To_Bd09(double lat, double lon);
-	   //火星坐标系 (GCJ-02) 与百度坐标系 (BD-09) 的转换算法 * * 将 BD-09 坐标转换成GCJ-02 坐标
+	    //火星坐标系 (GCJ-02) 与百度坐标系 (BD-09) 的转换算法 * * 将 BD-09 坐标转换成GCJ-02 坐标
         GpsUtil.bd09_To_Gcj02(double lat, double lon);
-	   //将gps84转为bd09
+	    //将gps84转为bd09
         GpsUtil.gps84_To_bd09(double lat, double lon);
-	   //将bd09转为gps84
+	    //将bd09转为gps84
         GpsUtil.bd09_To_gps84(double lat, double lon);
 - LogUtil （日志工具，调整为只在Debug模式下才有输出信息）
 
