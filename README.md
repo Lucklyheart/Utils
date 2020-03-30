@@ -201,10 +201,10 @@
         PreferencesUtil.getAll(Context);
 - HtmlUtil （链接工具类）
 	
-		//source  要匹配的源文本,element 标签名称,attr 标签的属性名称
-   	HtmlUtil.getSpecifyLabelValue(String source, String element, String attr);
-	  //获取url链接指定参数值
-	  getURLValueByName(String url, String name)
+		//source  要匹配的源文本,element 标签名称,attr 标签的属性名称 
+		HtmlUtil.getSpecifyLabelValue(String source, String element, String attr);
+		//获取url链接指定参数值
+		getURLValueByName(String url, String name)
 - ReflectUtil （反射工具用于二次验证）
 	
 		//根据字段名称获取指定Field字段
