@@ -1,5 +1,5 @@
 ### Utils
-一些经常使用的工具类，避免重复手写，一行代码搞定，大小只有120+K，值得拥有！
+一些经常使用的工具类，避免重复手写，一行代码搞定，大小只有100+K，值得拥有！
 ### What functions can be used
 - AcacheUtil（缓存管理：一些基本数据的存储操作）
 		
@@ -64,9 +64,6 @@
         Bitmap bitmap = BitmapUtil.captureView(View);
         //保存图片到本地
         Bitmap bitmap = BitmapUtil.saveBitmap(Context,Bitmap,FileName);
-- ColorUtil  (定义了一些出场率较高的色值) 
-	
-		定义了69种常用色值供使用
 - CountDownTimerUtil （倒计时工具类）
 	
 		//millisInFuture：总时长
@@ -105,28 +102,6 @@
         FileUtil.mkDir(path);
         //是否新加指定path文件
         FileUtil.mkFile(path, boolean);
-- HttpUtil （原生HTTP请求工具）
-	
-		//get同步请求
-        String result = HttpUtil.doGet(url);
-        //get异步请求
-        HttpUtil.doGetAsyn(url, new HttpUtil.CallBack() {
-            @Override
-            public void onRequestComplete(String s) {
-                //do something
-            }
-        });
-	
-        //post同步请求
-        String result=HttpUtil.doPost(url,param);
-        //post异步请求
-        HttpUtil.doPostAsyn(url, param,new HttpUtil.CallBack() {
-            @Override
-            public void onRequestComplete(String s) {
-                //do something
-            }
-        });
-    }
 - LogUtil （日志工具，调整为只在Debug模式下才有输出信息）
 
 		//只有在debug模式下日志信息才会输出
@@ -152,10 +127,6 @@
         MeasureUtil.setHeight(View,height);
         //设置View宽度
         MeasureUtil.setWidth(View,width);
-        //设置listview实际高度
-        MeasureUtil.setListHeight(ListView);
-        //设置grideview高度，n:行数，m:列数
-        MeasureUtil.setGridViewHeight(Context, GridView,n,m);
 - NetWorkUtil （网络工具类，包含网络的判断、跳转到设置页面）
 		
 		//打开设置
@@ -228,11 +199,12 @@
         PreferencesUtil.putStringSet(Context,setKey,Set);
         //获取所有存储信息Map
         PreferencesUtil.getAll(Context);
-- ProgressDlgUtil （进度条工具类）
+- HtmlUtil （链接工具类）
 	
-		//圆形进度条
-        ProgressDlgUtil.show(Context);
-        ProgressDlgUtil.dismiss();
+		//source  要匹配的源文本,element 标签名称,attr 标签的属性名称
+   	HtmlUtil.getSpecifyLabelValue(String source, String element, String attr);
+	  //获取url链接指定参数值
+	  getURLValueByName(String url, String name)
 - ReflectUtil （反射工具用于二次验证）
 	
 		//根据字段名称获取指定Field字段
@@ -305,9 +277,6 @@
 - StringUtil （字符串工具类，提供一些字符串相关的便捷方法）
 	
 		包含了一些常用的字符串检测：格式转换、空判断、MD5加密、大小写判断、长度、截取、格式化等操作
-- ToastUtil （Tosat提醒）
-	
-		常用的toast提醒
 - XmlUtil （XML文件工具类，包含：将xml文件解析成实体集合、获取xml标签值、将标签值解析成实体集合）
 	
 		//获取xml字符串标签中的属性值
