@@ -108,6 +108,20 @@
         FileUtil.mkDir(path);
         //是否新加指定path文件
         FileUtil.mkFile(path, boolean);
+- GpsUtil （坐标系转化工具）
+
+		//84 to 火星坐标系 (GCJ-02) World Geodetic System ==> Mars Geodetic System
+        GpsUtil.gps84_To_Gcj02(double lat, double lon);
+	  //火星坐标系 (GCJ-02) to 84 * * @param lon * @param lat
+        GpsUtil.gcj02_To_Gps84(double lat, double lon);
+	  //火星坐标系 (GCJ-02) 与百度坐标系 (BD-09) 的转换算法 将 GCJ-02 坐标转换成 BD-09 坐标
+        GpsUtil.gcj02_To_Bd09(double lat, double lon);
+	  //火星坐标系 (GCJ-02) 与百度坐标系 (BD-09) 的转换算法 * * 将 BD-09 坐标转换成GCJ-02 坐标
+        GpsUtil.bd09_To_Gcj02(double lat, double lon);
+	  //将gps84转为bd09
+        GpsUtil.gps84_To_bd09(double lat, double lon);
+	  //将bd09转为gps84
+        GpsUtil.bd09_To_gps84(double lat, double lon);
 - LogUtil （日志工具，调整为只在Debug模式下才有输出信息）
 
 		//只有在debug模式下日志信息才会输出
@@ -172,7 +186,9 @@
         //是否钱
         NumberUtil.isMoney(String str);	
         //是否数字
-        NumberUtil.isNumber(String str);	
+        NumberUtil.isNumber(String str);
+        //保留小数点后多少位 num数据源   match位数
+        NumberUtil.retain(double mun，int match);
 - PhoneUtil （手机组件工具类）
 	
 		//获取手机品牌
@@ -183,10 +199,6 @@
         PhoneUtil.isFastDoubleClick();
         //发送短信
         PhoneUtil.sendMessage(Activity,phoneNumber,smsContent);
-        //打开相册
-        PhoneUtil.toTakePicture(requestCode,Activity);
-        //打开相机 fileName：要保存的文件名
-        PhoneUtil.toTakePhoto(requestCode,Activity,fileName);
 - PreferencesUtil （SharedPreferences工具类，包含常用的数值获取和存储）
 	 	
 		//清空数据
@@ -210,7 +222,7 @@
 		//source  要匹配的源文本,element 标签名称,attr 标签的属性名称 
 		HtmlUtil.getSpecifyLabelValue(String source, String element, String attr);
 		//获取url链接指定参数值
-		getURLValueByName(String url, String name)
+		HtmlUtil.getURLValueByName(String url, String name)
 - ReflectUtil （反射工具用于二次验证）
 	
 		//根据字段名称获取指定Field字段
