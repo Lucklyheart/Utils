@@ -109,7 +109,7 @@
         //是否新加指定path文件
         FileUtil.mkFile(path, boolean); 
         //获取文件(夹)大小
-        FileUtil.getFileSize(filename); 
+        FileUtil.getFileSize(file); 
 - GpsUtil （坐标系转化工具）
 
 		//84 to 火星坐标系 (GCJ-02) World Geodetic System ==> Mars Geodetic System
