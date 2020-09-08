@@ -12,11 +12,12 @@ import java.io.InputStream;
 public class FileUtil {
     /**
      * 在指定的位置创建指定的文件
+     *
      * @param filePath 完整的文件路径
-     * @param mkdir 是否创建相关的文件夹
+     * @param mkdir    是否创建相关的文件夹
      * @throws IOException
      */
-    public static void mkFile(String filePath, boolean mkdir) throws IOException{
+    public static void mkFile(String filePath, boolean mkdir) throws IOException {
         File file = new File(filePath);
         /**
          * mkdirs()创建多层目录，mkdir()创建单层目录
@@ -30,6 +31,7 @@ public class FileUtil {
 
     /**
      * 在指定的位置创建文件夹
+     *
      * @param dirPath 文件夹路径
      * @return 若创建成功，则返回True；反之，则返回False
      */
@@ -39,6 +41,7 @@ public class FileUtil {
 
     /**
      * 删除指定的文件
+     *
      * @param filePath 文件路径
      * @return 若删除成功，则返回True；反之，则返回False
      */
@@ -48,6 +51,7 @@ public class FileUtil {
 
     /**
      * 删除指定的文件夹
+     *
      * @param dirPath 文件夹路径
      * @param delFile 文件夹中是否包含文件
      * @return 若删除成功，则返回True；反之，则返回False
@@ -81,8 +85,9 @@ public class FileUtil {
 
     /**
      * 复制文件/文件夹 若要进行文件夹复制，请勿将目标文件夹置于源文件夹中
-     * @param source 源文件（夹）
-     * @param target 目标文件（夹）
+     *
+     * @param source   源文件（夹）
+     * @param target   目标文件（夹）
      * @param isFolder 若进行文件夹复制，则为True；反之为False
      * @throws IOException
      */
@@ -109,7 +114,8 @@ public class FileUtil {
                     output.flush();
                     output.close();
                     input.close();
-                } if (temp.isDirectory()) {
+                }
+                if (temp.isDirectory()) {
                     copy(source + File.separator + file[i], target + File.separator + file[i], true);
                 }
             }
@@ -123,12 +129,31 @@ public class FileUtil {
                 file.createNewFile();
                 FileOutputStream outputStream = new FileOutputStream(file);
                 byte[] buffer = new byte[1024];
-                while ((byteread = inputStream.read(buffer)) != -1){
+                while ((byteread = inputStream.read(buffer)) != -1) {
                     outputStream.write(buffer, 0, byteread);
                 }
                 inputStream.close();
                 outputStream.close();
             }
         }
+    }
+
+    /**
+     * 获取文件(夹)大小
+     *
+     * @param f
+     * @return
+     */
+    public static long getFileSize(File f) {
+        long size = 0;
+        File flist[] = f.listFiles();
+        for (int i = 0; i < flist.length; i++) {
+            if (flist[i].isDirectory()) {
+                size = size + getFileSize(flist[i]);
+            } else {
+                size = size + flist[i].length();
+            }
+        }
+        return size;
     }
 }

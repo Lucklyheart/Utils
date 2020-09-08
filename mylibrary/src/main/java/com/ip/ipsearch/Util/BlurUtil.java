@@ -8,18 +8,16 @@ import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.support.annotation.RequiresApi;
-import android.util.Log;
 
 /**
  *高斯模糊算法适用于api 17(Android 4.4)及其以上
  */
 public class BlurUtil {
 
-    private static final float SCALE = 1 / 8.0F;//default scale
     private static volatile BlurUtil singleton = null;
     private Bitmap mBitmap;
     private int mRadius = 0;
-    private float mScale = SCALE;
+    private float mScale = 1 / 8.0F;//default scale
     private Context mContext;
 
 

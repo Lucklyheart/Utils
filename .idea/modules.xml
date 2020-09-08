@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Utils.iml" filepath="$PROJECT_DIR$/Utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Utils.iml" filepath="$PROJECT_DIR$/Utils.iml" group="Utils" />
+      <module fileurl="file://$PROJECT_DIR$/app/Utils-app.iml" filepath="$PROJECT_DIR$/app/Utils-app.iml" group="Utils/app" />
+      <module fileurl="file://$PROJECT_DIR$/mylibrary/Utils-mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/Utils-mylibrary.iml" group="Utils/mylibrary" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
     </modules>

@@ -1,11 +1,7 @@
 package com.ip.ipsearch.Util;
 
-import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.GridView;
-import android.widget.ListView;
 
 /**
  * 常用的测量功能
