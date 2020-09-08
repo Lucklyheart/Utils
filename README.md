@@ -107,7 +107,9 @@
         //新建指定path文件夹
         FileUtil.mkDir(path);
         //是否新加指定path文件
-        FileUtil.mkFile(path, boolean);
+        FileUtil.mkFile(path, boolean); 
+        //获取文件(夹)大小
+        FileUtil.getFileSize(filename); 
 - GpsUtil （坐标系转化工具）
 
 		//84 to 火星坐标系 (GCJ-02) World Geodetic System ==> Mars Geodetic System
@@ -299,7 +301,13 @@
 	
 		//url 下载地址
         //AppName 保存的app地址名称
-        new UpdateUtil(getContext).downLoad(String url,String AppName)
+        new UpdateUtil(getContext).downLoad(String url,String AppName)；
+- VidoeUtil （视频工具类）
+	
+		//获取(网络或本地)视频某一帧的图片 time 毫秒级
+        VideoUtil.getVideoFrameImg(Context context, String videoUri, long time);
+        //获取视频信息（时长、宽高、帧总数、角度、名字。作者。。。。） keyCode：视频信息类型  例:MediaMetadataRetriever.METADATA_KEY_xxxxxx
+        VideoUtil.getVideoValueByCode(Context context, String videoUri, int keyCode)
 - XmlUtil （XML文件工具类，包含：将xml文件解析成实体集合、获取xml标签值、将标签值解析成实体集合）
 	
 		//获取xml字符串标签中的属性值
