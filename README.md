@@ -302,7 +302,7 @@
 		//url 下载地址
         //AppName 保存的app地址名称
         new UpdateUtil(getContext).downLoad(String url,String AppName)；
-- VidoeUtil （视频工具类）
+- VidoeUtil （视频工具类：方法耗时，建议非主线程调用）
 	
 		//获取(网络或本地)视频某一帧的图片 time 毫秒级
         VideoUtil.getVideoFrameImg(Context context, String videoUri, long time);
